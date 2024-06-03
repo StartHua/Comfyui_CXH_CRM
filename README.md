@@ -1,3 +1,6 @@
+1. 安装依赖requirements.txt 或者直接双击install_req.bat 自动安装依赖
+
+2.直接运行自动下载模型或者手动下载模型放到下面图片位置
 
 ![3ae90686c2e74dbf87655ea8727c781](https://github.com/StartHua/Comfyui_CXH_CRM/assets/22284244/61888682-a5c4-4b69-8f44-8e22384485f4)
 
