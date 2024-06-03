@@ -2,6 +2,8 @@
 
 2.直接运行自动下载模型或者手动下载模型放到下面图片位置
 
+https://huggingface.co/Zhengyi/CRM
+
 ![3ae90686c2e74dbf87655ea8727c781](https://github.com/StartHua/Comfyui_CXH_CRM/assets/22284244/61888682-a5c4-4b69-8f44-8e22384485f4)
 
 ![10cb31380f6f1bbbda2f3e443af2e32](https://github.com/StartHua/Comfyui_CXH_CRM/assets/22284244/61e53d1d-3c74-4f27-b92f-fd192290e57e)
