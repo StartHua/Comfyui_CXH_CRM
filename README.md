@@ -1,4 +1,10 @@
 1. 安装依赖requirements.txt 或者直接双击install_req.bat 自动安装依赖 install_xformers.txt 可以参考xformers安装失败
+   
+   例子里所需节点:
+   
+     https://github.com/chflame163/ComfyUI_LayerStyle
+
+     https://github.com/ZHO-ZHO-ZHO/ComfyUI-BiRefNet-ZHO
 
 2.直接运行自动下载模型或者手动下载模型放到下面图片位置
 
