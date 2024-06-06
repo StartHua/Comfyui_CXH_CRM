@@ -30,7 +30,7 @@ class CRM:
         return {
             "required": {
                "image": ("IMAGE",),
-               "model": (["CRM", "ImageDream"],),
+               #    "model": (["CRM", "ImageDream"],),
                "guidance_scale":("FLOAT", {"default": 3, "min": 1, "max": 10, "step": 0.01}),
                "steps":("INT", {"default": 50, "min": 20, "max": 100, "step": 0.01}),
                "seed": ("INT", {"default": 0, "min": 0, "max": 99999999}),       
@@ -41,7 +41,8 @@ class CRM:
     RETURN_TYPES = ("IMAGE", )
     FUNCTION = "load_image"
     
-    def load_image(self,image,model,guidance_scale,steps,seed):
+    #  def load_image(self,image,model,guidance_scale,steps,seed):
+    def load_image(self,image,guidance_scale,steps,seed):
         
         self.seed = seed
         self.guidance_scale = guidance_scale
