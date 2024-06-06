@@ -5,6 +5,8 @@
      https://github.com/chflame163/ComfyUI_LayerStyle
 
      https://github.com/ZHO-ZHO-ZHO/ComfyUI-BiRefNet-ZHO
+   
+   安装注意requirements.txt 里面diffusers==0.24.0版本比较低，可以自行屏蔽！
 
 2.直接运行自动下载模型或者手动下载模型放到下面图片位置
 
