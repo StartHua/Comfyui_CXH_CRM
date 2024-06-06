@@ -21,6 +21,7 @@ def download_hg_model(model_id:str,exDir:str=''):
     if not os.path.exists(model_checkpoint):
         from huggingface_hub import snapshot_download
         snapshot_download(repo_id=model_id, local_dir=model_checkpoint, local_dir_use_symlinks=False)
+    return   model_checkpoint  
 
 def tensor2pil(t_image: torch.Tensor)  -> Image:
     return Image.fromarray(np.clip(255.0 * t_image.cpu().numpy().squeeze(), 0, 255).astype(np.uint8))
