@@ -11,8 +11,22 @@ from PIL import Image, ImageOps, ImageSequence, ImageFile,UnidentifiedImageError
 from PIL.PngImagePlugin import PngInfo
 from omegaconf import OmegaConf
 
-from .lib.ximg import *
-from .lib.xmodel import *
+# from .lib.ximg import *
+# from .lib.xmodel import *
+
+# 下载hg 模型到本地
+def download_hg_model(model_id:str,exDir:str=''):
+    # 下载本地
+    model_checkpoint = os.path.join(folder_paths.models_dir, exDir, os.path.basename(model_id))
+    if not os.path.exists(model_checkpoint):
+        from huggingface_hub import snapshot_download
+        snapshot_download(repo_id=model_id, local_dir=model_checkpoint, local_dir_use_symlinks=False)
+
+def tensor2pil(t_image: torch.Tensor)  -> Image:
+    return Image.fromarray(np.clip(255.0 * t_image.cpu().numpy().squeeze(), 0, 255).astype(np.uint8))
+
+def pil2tensor(image:Image) -> torch.Tensor:
+    return torch.from_numpy(np.array(image).astype(np.float32) / 255.0).unsqueeze(0)
 
 import sys
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -30,7 +44,7 @@ class CRM:
         return {
             "required": {
                "image": ("IMAGE",),
-               "model": (["CRM", "ImageDream"],),
+               #    "model": (["CRM", "ImageDream"],),
                "guidance_scale":("FLOAT", {"default": 3, "min": 1, "max": 10, "step": 0.01}),
                "steps":("INT", {"default": 50, "min": 20, "max": 100, "step": 0.01}),
                "seed": ("INT", {"default": 0, "min": 0, "max": 99999999}),       
@@ -41,7 +55,8 @@ class CRM:
     RETURN_TYPES = ("IMAGE", )
     FUNCTION = "load_image"
     
-    def load_image(self,image,model,guidance_scale,steps,seed):
+    #  def load_image(self,image,model,guidance_scale,steps,seed):
+    def load_image(self,image,guidance_scale,steps,seed):
         
         self.seed = seed
         self.guidance_scale = guidance_scale
