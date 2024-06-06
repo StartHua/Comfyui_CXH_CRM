@@ -4,7 +4,7 @@
    
      https://github.com/chflame163/ComfyUI_LayerStyle
 
-     https://github.com/ZHO-ZHO-ZHO/ComfyUI-BiRefNet-ZHO
+      https://github.com/ZHO-ZHO-ZHO/ComfyUI-BRIA_AI-RMBG
    
    安装注意requirements.txt 里面diffusers==0.24.0版本比较低，可以自行屏蔽！
 
