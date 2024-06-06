@@ -1,3 +1,5 @@
+安装参考视频:https://www.bilibili.com/video/BV1dm421577d/?vd_source=814e47aefcb1536c49e46a7d6cd8bc71
+
 1. 安装依赖requirements.txt 或者直接双击install_req.bat 自动安装依赖 install_xformers.txt 可以参考xformers安装失败
    
    例子里所需节点:
